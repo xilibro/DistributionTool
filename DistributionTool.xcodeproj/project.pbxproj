@@ -12,6 +12,7 @@
 		DFBD2C2921B4D03E00CB819F /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2821B4D03E00CB819F /* ConfigViewController.swift */; };
 		DFBD2C2C21B4FC8E00CB819F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */; };
 		DFBD2C2D21B4FC8E00CB819F /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */; };
+		DFBD2C3021B67C1B00CB819F /* DeprecateCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */; };
 		DFCF9DAA219E9DB700B4A468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCF9DA9219E9DB700B4A468 /* AppDelegate.swift */; };
 		DFCF9DAC219E9DB700B4A468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCF9DAB219E9DB700B4A468 /* ViewController.swift */; };
 		DFCF9DAE219E9DB900B4A468 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCF9DAD219E9DB900B4A468 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		DFBD2C2821B4D03E00CB819F /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecateCodes.swift; sourceTree = "<group>"; };
 		DFCF9DA6219E9DB700B4A468 /* DistributionTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCF9DA9219E9DB700B4A468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCF9DAB219E9DB700B4A468 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */,
 				DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */,
 				DFBD2C2E21B5051300CB819F /* Sample Data */,
+				DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */,
 			);
 			path = DistributionTool;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCF9DAC219E9DB700B4A468 /* ViewController.swift in Sources */,
+				DFBD2C3021B67C1B00CB819F /* DeprecateCodes.swift in Sources */,
 				DFCF9DAA219E9DB700B4A468 /* AppDelegate.swift in Sources */,
 				DFBD2C2921B4D03E00CB819F /* ConfigViewController.swift in Sources */,
 				DFBD2C2C21B4FC8E00CB819F /* SettingViewController.swift in Sources */,
