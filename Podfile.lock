@@ -1,0 +1,20 @@
+PODS:
+  - NMSSH (2.3.1)
+  - SSZipArchive (2.1.4)
+
+DEPENDENCIES:
+  - NMSSH
+  - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NMSSH
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  NMSSH: cd689ae535a1581a6dd9fd4600ff71247df510a6
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
+
+PODFILE CHECKSUM: a9700f4b4aa4c84d98c61ade0ee07d1d5413d621
+
+COCOAPODS: 1.5.3
