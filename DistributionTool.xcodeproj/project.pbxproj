@@ -51,11 +51,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DFBD2C2E21B5051300CB819F /* Sample Data */ = {
+		DFBD2C2E21B5051300CB819F /* SampleData */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Sample Data";
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		DFCF9D9D219E9DB700B4A468 = {
@@ -89,7 +89,7 @@
 				DF3F158921A5503300AD06D0 /* DistributionTool-Bridging-Header.h */,
 				DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */,
 				DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */,
-				DFBD2C2E21B5051300CB819F /* Sample Data */,
+				DFBD2C2E21B5051300CB819F /* SampleData */,
 				DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */,
 			);
 			path = DistributionTool;
