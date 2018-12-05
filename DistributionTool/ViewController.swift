@@ -35,7 +35,7 @@ class ViewController: NSViewController {
         let userName = userNameTF.stringValue
         let host = hostTF.stringValue
         let port = portTF.integerValue
-        let targetPath = targetPathTF.stringValue
+        let targetPath = targetPathTF.stringValue + "/"
         
         self.printProcessingInfo(info: "准备连接服务器...")
         
@@ -144,7 +144,7 @@ class ViewController: NSViewController {
                                 response = session.channel.execute("\(cdCommand);\(unzipCommand);\(rmCommand);", error: error)
                                 
                                 self.printProcessingInfo(info: response)
-                                self.printProcessingInfo(info: "文件解压缩完毕，发布完成")
+                                self.printProcessingInfo(info: "文件解压缩完毕，发布完成，服务器连接已断开")
                                 
                                 session.disconnect();
                                 
