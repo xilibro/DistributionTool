@@ -728,7 +728,7 @@
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2iJ-RL-eUx">
                                                         <rect key="frame" x="70" y="0.0" width="284" height="22"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="172.20.2.146" drawsBackground="YES" id="wiI-yz-uzS">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="wiI-yz-uzS">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -757,7 +757,7 @@
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eDr-h8-lJZ">
                                                         <rect key="frame" x="43" y="0.0" width="310" height="22"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="22" drawsBackground="YES" id="pB5-VW-wa1">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="pB5-VW-wa1">
                                                             <font key="font" usesAppearanceFont="YES"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -804,7 +804,7 @@
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HKw-VD-4FF">
                                                         <rect key="frame" x="70" y="0.0" width="195" height="22"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="haihong" drawsBackground="YES" id="WsK-bH-V6Y">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="WsK-bH-V6Y">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -833,7 +833,7 @@
                                                     </textField>
                                                     <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-ig-Wy0">
                                                         <rect key="frame" x="43" y="0.0" width="222" height="22"/>
-                                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="hh123" drawsBackground="YES" usesSingleLineMode="YES" id="RVy-SE-Tcg">
+                                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="RVy-SE-Tcg">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -880,7 +880,7 @@
                                             </textField>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0zZ-Re-kjn">
                                                 <rect key="frame" x="70" y="0.0" width="645" height="22"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="/Users/haihong/yuexl/work/macOS/sshtemp/server/" drawsBackground="YES" id="isM-rX-FjS">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="isM-rX-FjS">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -897,23 +897,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="bottom" spacing="167" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHg-rd-eUI">
-                                        <rect key="frame" x="0.0" y="0.0" width="318" height="30"/>
+                                        <rect key="frame" x="665" y="0.0" width="50" height="30"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aOf-to-adn">
-                                                <rect key="frame" x="-2" y="-3" width="51" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="gGS-PM-xra"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="bevel" title="配置" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VSL-kO-Hpw">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="config:" target="XfG-lQ-9wD" id="h65-TX-Smf"/>
-                                                </connections>
-                                            </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r33-fZ-VDN">
-                                                <rect key="frame" x="212" y="-3" width="108" height="35"/>
+                                                <rect key="frame" x="-2" y="-3" width="54" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="hzE-Uj-ZWc"/>
                                                 </constraints>
@@ -931,10 +918,8 @@
                                         </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
@@ -945,6 +930,7 @@
                                     <constraint firstItem="UH8-hh-TG8" firstAttribute="trailing" secondItem="fZt-QP-BWf" secondAttribute="trailing" id="MXj-Dz-Ruw"/>
                                     <constraint firstItem="Wbj-Xj-RzG" firstAttribute="leading" secondItem="7Db-XF-vO2" secondAttribute="leading" id="ROb-oL-Yo4"/>
                                     <constraint firstAttribute="trailing" secondItem="Wbj-Xj-RzG" secondAttribute="trailing" id="bbG-zq-QgK"/>
+                                    <constraint firstItem="dHg-rd-eUI" firstAttribute="trailing" secondItem="Q1S-v4-Ugw" secondAttribute="trailing" id="e9T-T8-vYS"/>
                                     <constraint firstItem="Q1S-v4-Ugw" firstAttribute="leading" secondItem="7Db-XF-vO2" secondAttribute="leading" id="gaz-wW-its"/>
                                     <constraint firstAttribute="trailing" secondItem="Q1S-v4-Ugw" secondAttribute="trailing" id="uxn-Vs-BdZ"/>
                                     <constraint firstItem="Wbj-Xj-RzG" firstAttribute="top" secondItem="7Db-XF-vO2" secondAttribute="top" id="vva-yK-HDJ"/>
