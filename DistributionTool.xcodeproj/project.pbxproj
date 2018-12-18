@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		DF3F158F21A551D100AD06D0 /* Pods_DistributionTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E664DA293489C6BAB0BE0A /* Pods_DistributionTool.framework */; };
 		DF624B5721A6620D00083DD2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF624B5621A6620D00083DD2 /* SystemConfiguration.framework */; };
+		DFB83E3521BA189400FB912F /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB83E3421BA189400FB912F /* ConfigViewController.xib */; };
+		DFB83E3C21BA4EF900FB912F /* ServerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB83E3B21BA4EF900FB912F /* ServerProfile.swift */; };
 		DFBD2C2921B4D03E00CB819F /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2821B4D03E00CB819F /* ConfigViewController.swift */; };
-		DFBD2C2C21B4FC8E00CB819F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */; };
-		DFBD2C2D21B4FC8E00CB819F /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */; };
 		DFBD2C3021B67C1B00CB819F /* DeprecateCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */; };
 		DFCF9DAA219E9DB700B4A468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCF9DA9219E9DB700B4A468 /* AppDelegate.swift */; };
 		DFCF9DAC219E9DB700B4A468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCF9DAB219E9DB700B4A468 /* ViewController.swift */; };
@@ -24,9 +24,9 @@
 		64E664DA293489C6BAB0BE0A /* Pods_DistributionTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3F158921A5503300AD06D0 /* DistributionTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DistributionTool-Bridging-Header.h"; sourceTree = "<group>"; };
 		DF624B5621A6620D00083DD2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DFB83E3421BA189400FB912F /* ConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
+		DFB83E3B21BA4EF900FB912F /* ServerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerProfile.swift; sourceTree = "<group>"; };
 		DFBD2C2821B4D03E00CB819F /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
-		DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeprecateCodes.swift; sourceTree = "<group>"; };
 		DFCF9DA6219E9DB700B4A468 /* DistributionTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCF9DA9219E9DB700B4A468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFB83E3A21BA4EC200FB912F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DFB83E3B21BA4EF900FB912F /* ServerProfile.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		DFCF9D9D219E9DB700B4A468 = {
 			isa = PBXGroup;
 			children = (
@@ -72,16 +80,16 @@
 		DFCF9DA8219E9DB700B4A468 /* DistributionTool */ = {
 			isa = PBXGroup;
 			children = (
+				DFB83E3A21BA4EC200FB912F /* model */,
 				DFCF9DA9219E9DB700B4A468 /* AppDelegate.swift */,
 				DFCF9DAB219E9DB700B4A468 /* ViewController.swift */,
 				DFBD2C2821B4D03E00CB819F /* ConfigViewController.swift */,
+				DFB83E3421BA189400FB912F /* ConfigViewController.xib */,
 				DFCF9DAD219E9DB900B4A468 /* Assets.xcassets */,
 				DFCF9DAF219E9DB900B4A468 /* Main.storyboard */,
 				DFCF9DB2219E9DB900B4A468 /* Info.plist */,
 				DFCF9DB3219E9DB900B4A468 /* DistributionTool.entitlements */,
 				DF3F158921A5503300AD06D0 /* DistributionTool-Bridging-Header.h */,
-				DFBD2C2A21B4FC8E00CB819F /* SettingViewController.swift */,
-				DFBD2C2B21B4FC8E00CB819F /* SettingViewController.xib */,
 				DFBD2C2F21B67C1B00CB819F /* DeprecateCodes.swift */,
 			);
 			path = DistributionTool;
@@ -172,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCF9DAE219E9DB900B4A468 /* Assets.xcassets in Resources */,
-				DFBD2C2D21B4FC8E00CB819F /* SettingViewController.xib in Resources */,
+				DFB83E3521BA189400FB912F /* ConfigViewController.xib in Resources */,
 				DFCF9DB1219E9DB900B4A468 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,10 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCF9DAC219E9DB700B4A468 /* ViewController.swift in Sources */,
+				DFB83E3C21BA4EF900FB912F /* ServerProfile.swift in Sources */,
 				DFBD2C3021B67C1B00CB819F /* DeprecateCodes.swift in Sources */,
 				DFCF9DAA219E9DB700B4A468 /* AppDelegate.swift in Sources */,
 				DFBD2C2921B4D03E00CB819F /* ConfigViewController.swift in Sources */,
-				DFBD2C2C21B4FC8E00CB819F /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Cocoa
 import SystemConfiguration
 import SSZipArchive
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSComboBoxDelegate, NSComboBoxDataSource {
     
     @IBOutlet weak var resultView: NSScrollView!
     @IBOutlet weak var targetPathTF: NSTextField!
@@ -19,12 +19,48 @@ class ViewController: NSViewController {
     @IBOutlet weak var passwordTF: NSSecureTextField!
     @IBOutlet weak var hostTF: NSTextField!
     @IBOutlet weak var portTF: NSTextField!
+    @IBOutlet weak var projectNamesCmb: NSComboBox!
+    
+    var profiles = [ServerProfile]()
+    var selectedProfileIndex = 0
+    var selectedProfile: ServerProfile? {
+        didSet {
+            if selectedProfile != nil {
+                hostTF.stringValue = selectedProfile!.host
+                portTF.stringValue = String(selectedProfile!.port)
+                userNameTF.stringValue = selectedProfile!.userName
+                passwordTF.stringValue = selectedProfile!.password
+                targetPathTF.stringValue  = selectedProfile!.targetPath
+                projectNamesCmb.stringValue = selectedProfile!.projectName
+            } else {
+                hostTF.stringValue = ""
+                portTF.stringValue = ""
+                userNameTF.stringValue = ""
+                passwordTF.stringValue = ""
+                targetPathTF.stringValue  = ""
+                projectNamesCmb.stringValue = ""
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        projectNamesCmb.usesDataSource = true
+        projectNamesCmb.dataSource = self
+        projectNamesCmb.delegate = self
+        projectNamesCmb.completes = true
+        
         // Do any additional setup after loading the view.
         printProcessingInfo(info: "欢迎使用网站发布小工具 :)")
+        
+        // 读取配置项
+        profiles = readDefaults()
+        
+        if profiles.count > 0 {
+            projectNamesCmb.reloadData()
+            projectNamesCmb.selectItem(at: selectedProfileIndex)
+        }
     }
     
     @IBAction func connect(_ sender: NSButton) {
@@ -144,30 +180,63 @@ class ViewController: NSViewController {
                                 response = session.channel.execute("\(cdCommand);\(unzipCommand);\(rmCommand);", error: error)
                                 
                                 self.printProcessingInfo(info: response)
-                                self.printProcessingInfo(info: "文件解压缩完毕，发布完成，服务器连接已断开")
+                                self.printProcessingInfo(info: "文件解压缩完毕，发布完成，服务器连接已关闭")
                                 
                                 session.disconnect();
                                 
                             } else {
                                 
                                 session.disconnect();
-                                self.printProcessingInfo(info: "文件上传失败，服务器连接已断开")
+                                self.printProcessingInfo(info: "文件上传失败，服务器连接已关闭")
                             }
                         }
                     }
                 } else {
                     session.disconnect();
-                    self.printProcessingInfo(info: "服务器连接已断开")
+                    self.printProcessingInfo(info: "服务器连接已关闭")
                 }
             }
         }
     }
     
     @IBAction func config(_ sender: NSButton) {
-        let settingVC = SettingViewController.init(nibName:"SettingViewController", bundle: nil)
+        let settingVC = ConfigViewController.init(nibName:"ConfigViewController", bundle: nil)
+        settingVC.selectedProfileIndex = selectedProfileIndex >= 0 ? selectedProfileIndex : 0
+        settingVC.completionHandler = { index in
+            // 读取配置项
+            self.profiles = self.readDefaults()
+            self.projectNamesCmb.reloadData()
+            
+            if index >= 0 && self.profiles.count > 0 {
+                self.selectedProfileIndex = index
+                self.selectedProfile = self.profiles[self.selectedProfileIndex]
+                self.projectNamesCmb.selectItem(at: self.selectedProfileIndex)
+            } else {
+                self.selectedProfile = nil
+            }
+        }
         self.presentAsModalWindow(settingVC)
     }
     
+    // MARK- ComboBox 数据源
+
+    func numberOfItems(in comboBox: NSComboBox) -> Int {
+        return profiles.count
+    }
+    
+    func comboBox(_ comboBox: NSComboBox, objectValueForItemAt index: Int) -> Any? {
+        return profiles[index].projectName
+    }
+    
+    func comboBoxSelectionDidChange(_ notification: Notification) {
+        selectedProfileIndex = projectNamesCmb.indexOfSelectedItem
+        if selectedProfileIndex >= 0 {
+            selectedProfile = profiles[selectedProfileIndex]
+        } else {
+            selectedProfile = nil
+        }
+    }
+
     override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
@@ -183,5 +252,18 @@ class ViewController: NSViewController {
         }
     }
     
+    func readDefaults() -> [ServerProfile] {
+        var myProfiles = [ServerProfile]()
+        let defaults = UserDefaults.standard
+        
+        if let profilesDefaults = defaults.array(forKey: "profiles"), profilesDefaults.count > 0 {
+            for profileDict in profilesDefaults {
+                if let newProfile = try? ServerProfile(dict: profileDict as! [String : Any]) {
+                    myProfiles.append(newProfile)
+                }
+            }
+        }
+        return myProfiles
+    }
 }
 
