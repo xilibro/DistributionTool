@@ -1,3 +1,3 @@
 #DistributionTool
 
-A sample tool for distributing website
+A sample tool for distributing Java、Vue、React website to linux server
